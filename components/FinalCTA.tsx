@@ -17,7 +17,7 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-xl sm:text-2xl text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
-          Join <strong className="text-white">2,000+ traders</strong>. Stop
+          Join <strong className="text-white">1,000+ users</strong>. Stop
           guessing. Get your first high-accuracy signals today.
         </p>
 

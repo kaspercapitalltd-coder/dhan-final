@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Ticker from "./Ticker";
 
 export default function Hero() {
   const scrollToPlans = () => {
@@ -18,11 +17,6 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-gold/10 rounded-full blur-[120px] pointer-events-none animate-float" />
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-bg-primary to-transparent" />
-      </div>
-
-      {/* Floating Ticker at top of hero */}
-      <div className="absolute top-0 left-0 z-20 w-full pt-1 sm:pt-4">
-        <Ticker />
       </div>
 
       {/* Main Content */}
@@ -56,7 +50,7 @@ export default function Hero() {
               India&apos;s most accurate F&O signal platform for NSE & BSE traders.
             </p>
             <p className="text-white font-medium text-lg sm:text-xl md:text-2xl mt-1">
-              Join 2,000+ traders already winning.
+              Join 1,000+ users already winning.
             </p>
           </motion.div>
 

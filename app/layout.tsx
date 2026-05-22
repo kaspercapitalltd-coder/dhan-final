@@ -23,7 +23,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "The Capital Guru — India's #1 F&O Signal Platform",
   description:
-    "Join 2,000+ traders getting high-accuracy NSE & BSE Futures & Options signals. Daily intraday & positional calls. Instant Telegram access. Join from ₹3,299/month.",
+    "Join 1,000+ users getting high-accuracy NSE & BSE Futures & Options signals. Daily intraday & positional calls. Instant Telegram access. Join from ₹3,299/month.",
   openGraph: {
     title: "The Capital Guru — Trade Smarter. Profit Bigger.",
     description:

@@ -50,10 +50,10 @@ const CountUp = ({
 
 export default function StatsBar() {
   const stats = [
-    { value: 2000, suffix: "+", label: "Members" },
+    { value: 1000, suffix: "+", label: "Users" },
     { value: 80, suffix: "%+", label: "Accuracy" },
-    { value: 50, suffix: "Cr+", currency: "₹", label: "Combined Profits" },
-    { value: 3, suffix: " Yrs", label: "Experience" },
+    { value: 3, suffix: "Cr+", currency: "₹", label: "Combined Profits" },
+    { value: 8, suffix: "+ Yrs", label: "Experience" },
   ];
 
   return (
