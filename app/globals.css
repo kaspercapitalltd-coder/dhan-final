@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #111111;
+  --color-bg-card: #161616;
+  --color-accent-gold: #F5C518;
+  --color-accent-gold-dim: #C9A000;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0A0A0;
+  --color-text-muted: #555555;
+  --color-border: #222222;
+  --color-success: #00C853;
+  --color-danger: #FF3D00;
+  --font-bebas: var(--font-bebas);
+  --font-dm-sans: var(--font-dm-sans);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* QUICK FIX PATCH v3 */
+.ticker-bar {
+  border-bottom: 1px solid rgba(245, 197, 24, 0.2);
+}
+
+.hero-section {
+  padding-top: 72px;      /* push headline DOWN away from ticker */
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100svh;     /* use svh not vh — accounts for mobile browser chrome */
+  justify-content: center;
+}
+
+.hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 14vw, 96px);   /* responsive — shrinks on small screens */
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
+}
+
+.hero-container {
+  overflow-x: clip;   /* prevent horizontal scroll */
+  padding: 0 16px;      /* safe zone on mobile */
+}
+
+.hero-subheadline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #A0A0A0;
+  max-width: 340px;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto 28px auto;
+}
+
+.cta-primary {
+  background: #F5C518;
+  color: #000000;
+  font-weight: 800;
+  font-size: 18px;
+  border: none;
+  border-radius: 9999px;     /* pill shape */
+  width: 100%;
+  height: 56px;
+  box-shadow: 0 0 24px rgba(245, 197, 24, 0.5);  /* gold glow */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* shimmer sweep animation */
+.cta-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer-sweep 2.5s infinite;
+}
+@keyframes shimmer-sweep {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #F5C518;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1.5px solid rgba(245, 197, 24, 0.5);   /* dimmer border */
+  border-radius: 9999px;
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* NO glow — clearly less important than primary */
+}
+
+.trust-badges {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 16px 4px;
+  scrollbar-width: none;   /* hide scrollbar */
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;         /* wrap on very small screens */
+}
+.trust-badges span {
+  background: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  color: #CCCCCC;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
